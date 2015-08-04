@@ -133,14 +133,13 @@ int main()
 						cout<<"\nProduct Price: "<<p[j].price;
 						cout<<"\nQuantity purchased: "<<q[i];
 						cout<<"\nQuantity Left :"<<p[j].qty;
-						totalPrice=totalprice+p[j].price;
+						
 					}
 				}
 			}
 		}
 				//Display total price...
-				cout<<"\n------------------------------------";
-				cout<<"\nTotal Bill to be paid : INR "<<totalPrice;
+				
 	}
 	
 
