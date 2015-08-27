@@ -7,7 +7,7 @@ using namespace std;
 class mob{
       char brand[10],mes[10][20];
       static char mess[10][20];
-      long imei,phoneNo1,phoneNo2;
+      long int imei,phoneNo1,phoneNo2;
       int noSim,x;
       public:
              mob(){

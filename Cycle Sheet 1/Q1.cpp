@@ -1,44 +1,52 @@
+using namespace std;
 #include<iostream>
 #include<string.h>
-using namespace std;
-
-// Class
-
+#include<conio.h>
 class student
 {
-	reg name age id
-	public:
-		char regno[15];
-		char name[50];
-		char email[50];
-		int age;
-		int isDuplicate();
-		
-		
-};
-
-int student::isDuplicate()
+    char regno[10],name[10],id[25];
+    int age;
+public:
+    void input()
+    {
+        cout<<"enter the regno\n";
+        cin>>regno;
+    }
+    void forw()
+    {
+        cout<<"\nenter the name\n";
+        cin>>name;
+        cout<<"\nenter email id\n";
+        cin>>id;
+        cout<<"\nenter the age\n";
+        cin>>age;
+    }
+    int check(student *stu,int n)
 {
-	
+    int i,c=0;
+    for(i=0;i<n;i++)
+    {
+        if(strcmp(stu[i].regno,stu[n].regno)==0)
+        {
+            cout<<"\nAlready registered\n\n";
+            c=1;
+        }
+        return c;
+    }
 }
+};
 int main()
 {
-	student s[3];
-	int i;
-	for(i=0;i<3;i++)
-	{
-		
-		cout<<"Enter Name : ";
-		cin>>s[i].name;
-		cout<<"Enter Registration Number : ";
-		cin>>s[i].regno;
-		cout<<"Enter Email ID: ";
-		cin>>s[i].email;
-		cout<<"Enter age: ";
-		cin>>s[i].age;
-		
-	}
-	
-	
+    student stu[20];
+    int i,j;
+    for(i=0;i<20;)
+    {   stu[i].input();
+        j=stu[i].check(stu,i);
+        if(j!=1)
+            {
+                stu[i].forw();
+                i++;
+            }
+    }
+getch();
 }
-
